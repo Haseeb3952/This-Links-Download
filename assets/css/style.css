@@ -48,6 +48,36 @@ body {
   width: 100%;
 }
 
+#go-top-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  background-color: #06c328;
+  border: none;
+  transition: opacity 0.4s, transform 0.4s;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  z-index: 99;
+  opacity: 0;
+  transform: scale(0.9);
+}
+
+#go-top-btn.show {
+  opacity: 1;
+  transform: scale(1);
+}
+
+#go-top-btn i {
+  color: #fff;
+  font-size: 25px;
+}
+
 .download-box:hover {
   background-color: #06c328;
 }
@@ -66,6 +96,15 @@ body {
 
 .download-box:hover .download-btn {
   display: block;
+}
+
+.bootstrap-input-reset-style:focus {
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+.newsletter-input input::placeholder {
+  color: #fff;
 }
 
 @media (min-width: 767.98px) {
